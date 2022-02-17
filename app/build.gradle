@@ -1,0 +1,65 @@
+import groovy.xml.MarkupBuilder
+
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.mungeun.android_clean_architecture_template"
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        dataBinding true
+    }
+}
+
+dependencies {
+    implementation project(":data")
+    implementation project(':domain')
+    // KTX
+    implementation (KTX.CORE)
+    // Test
+    implementation (AndroidTest.EXT_JUNIT)
+    implementation (AndroidTest.ESPRESSO_CORE)
+    // AndroidX
+    implementation (AndroidX.APP_COMPAT)
+    implementation (Google.MATERIAL)
+    // LiveData
+    implementation (AndroidX.LIFECYCLE_LIVEDATA)
+
+    // dagger hilt
+    implementation (DaggerHilt.DAGGER_HILT)
+    kapt (DaggerHilt.DAGGER_HILT_COMPILER)
+    implementation (DaggerHilt.DAGGER_HILT_VIEW_MODEL)
+    kapt (DaggerHilt.DAGGER_HILT_ANDROIDX_COMPILER)
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.4.0'
+    testImplementation 'junit:junit:4.+'
+
+}
