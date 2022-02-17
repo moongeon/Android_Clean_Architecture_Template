@@ -54,8 +54,8 @@ object Retrofit {
 }
 
 object OkHttp {
-    const val OKHTTP = "com.squareup.okhttp3:okhttp:4.9.1"
-    const val LOGGING_INTERCEPTOR = "com.squareup.okhttp3:logging-interceptor:4.9.1"
+    const val OKHTTP = "com.squareup.okhttp3:okhttp:4.9.2"
+    const val LOGGING_INTERCEPTOR = "com.squareup.okhttp3:logging-interceptor:4.9.2"
 }
 
 object Coroutines {

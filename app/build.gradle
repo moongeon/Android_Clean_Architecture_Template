@@ -51,7 +51,6 @@ dependencies {
     implementation (Google.MATERIAL)
     // LiveData
     implementation (AndroidX.LIFECYCLE_LIVEDATA)
-
     // dagger hilt
     implementation (DaggerHilt.DAGGER_HILT)
     kapt (DaggerHilt.DAGGER_HILT_COMPILER)
@@ -61,5 +60,12 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.4.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.4.0'
     testImplementation 'junit:junit:4.+'
+    // OkHttp
+    implementation(OkHttp.OKHTTP)
+    implementation(OkHttp.LOGGING_INTERCEPTOR)
+    // Retrofit
+    implementation (Retrofit.RETROFIT)
+    implementation (Retrofit.CONVERTER_GSON)
+
 
 }
