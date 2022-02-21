@@ -1,15 +1,8 @@
-package com.mungeun.android_clean_architecture_template.view
+package com.mungeun.android_clean_architecture_template.views
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
-import androidx.navigation.NavHostController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.mungeun.android_clean_architecture_template.R
 import com.mungeun.android_clean_architecture_template.base.BaseActivity
 import com.mungeun.android_clean_architecture_template.databinding.ActivityMainBinding

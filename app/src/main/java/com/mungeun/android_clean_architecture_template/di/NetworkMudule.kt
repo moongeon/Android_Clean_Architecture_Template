@@ -30,7 +30,6 @@ class NetworkMudule {
                 level = HttpLoggingInterceptor.Level.BODY
             })
             .build()
-        )
     }
 
     @Provides
